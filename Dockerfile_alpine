@@ -1,8 +1,8 @@
-FROM ubuntu:20.04
+FROM alpine:3.12
 
-RUN apt update \
- && apt install -y \
+RUN apk add --no-cache \
     curl \
+    aws-cli \
     vim
 
 # Install Helm 3
